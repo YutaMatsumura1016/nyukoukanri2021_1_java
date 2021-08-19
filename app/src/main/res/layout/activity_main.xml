@@ -21,4 +21,27 @@
         android:text="戸　山"
         tools:layout_editor_absoluteX="158dp"
         tools:layout_editor_absoluteY="441dp" />
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ログイン"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="523dp" />
+
+    <Button
+        android:id="@+id/buttonFinishLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="閉じる"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="614dp" />
+
+    <WebView
+        android:id="@+id/loginWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="71dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
