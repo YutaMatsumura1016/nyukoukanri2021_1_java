@@ -10,38 +10,46 @@
         android:id="@+id/buttonWaseda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
         android:text="早稲田"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="381dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonToyama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="戸　山"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="441dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonWaseda" />
 
     <Button
         android:id="@+id/buttonLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="ログイン"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="523dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonToyama" />
 
     <Button
         android:id="@+id/buttonFinishLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:text="閉じる"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="614dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/loginWebView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <WebView
         android:id="@+id/loginWebView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="71dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="-47dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

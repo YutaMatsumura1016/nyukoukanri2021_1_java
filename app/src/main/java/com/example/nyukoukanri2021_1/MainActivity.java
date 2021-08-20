@@ -14,18 +14,20 @@ public class MainActivity extends AppCompatActivity {
     //初期化
     static String gate = "str";
 
-    //ボタンの設定
-    Button buttonWaseda = findViewById(R.id.buttonWaseda);
-    Button buttonToyama = findViewById(R.id.buttonToyama);
-    Button buttonLogin = findViewById(R.id.buttonLogin);
-    Button buttonFinishLogin = findViewById(R.id.buttonFinishLogin);
-    WebView loginWebView = findViewById(R.id.loginWebView);
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //ボタンの設定
+        Button buttonWaseda = findViewById(R.id.buttonWaseda);
+        Button buttonToyama = findViewById(R.id.buttonToyama);
+        Button buttonLogin = findViewById(R.id.buttonLogin);
+        Button buttonFinishLogin = findViewById(R.id.buttonFinishLogin);
+        WebView loginWebView = findViewById(R.id.loginWebView);
         buttonFinishLogin.setVisibility(View.INVISIBLE);
 
 
@@ -46,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         });
         buttonLogin.setOnClickListener(v -> {
             loginWebView.setWebViewClient(new WebViewClient());
-            String sentURL = "https://www.yahoo.co.jp";
+            String sentURL = "https://drive.google.com/file/d/1rq38l_a8wmZsA8mKw-2yV9M248_BlKmy/view?usp=sharing";
 
             loginWebView.loadUrl(sentURL);
             buttonFinishLogin.setVisibility(View.VISIBLE);
@@ -58,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             loginWebView.setVisibility(View.INVISIBLE);
             buttonFinishLogin.setVisibility(View.INVISIBLE);
             buttonWaseda.setVisibility(View.VISIBLE);
-            buttonWaseda.setVisibility(View.VISIBLE);
+            buttonToyama.setVisibility(View.VISIBLE);
         });
     }
 
@@ -67,3 +69,5 @@ public class MainActivity extends AppCompatActivity {
 
 
 }
+
+
