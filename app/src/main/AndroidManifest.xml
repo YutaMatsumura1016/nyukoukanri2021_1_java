@@ -30,4 +30,8 @@
 
     </application>
 
+    <queries>
+        <package android:name="com.deploygate" />
+    </queries>
+
 </manifest>

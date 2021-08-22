@@ -1,2 +1,18 @@
+pluginManagement {
+    repositories {
+        mavenCentral()
+    }
+    resolutionStrategy {
+        eachPlugin {
+            switch (requested.id.id) {
+                case "deploygate":
+                    useModule("com.deploygate:gradle:${required.version}")
+                    break
+            }
+        }
+    }
+}
+
 include ':app'
 rootProject.name = "nyukoukanri2021_1"
+
