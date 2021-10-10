@@ -14,14 +14,16 @@
         android:scaleType="fitStart"
         android:src="@drawable/kidou_bg_ue"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/image_shita"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitEnd"
-        android:src="@drawable/kidou_bg_shita" />
+        android:src="@drawable/kidou_bg_shita"
+        tools:ignore="ContentDescription" />
 
 
     <ImageButton
@@ -33,7 +35,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_ue"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/buttonToyama"
@@ -43,7 +45,8 @@
         android:background="@drawable/toyama"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonWaseda" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonWaseda"
+        tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/buttonKougai"
@@ -53,7 +56,8 @@
         android:background="@drawable/kougai"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonToyama" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonToyama"
+        tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/buttonGakkan"
@@ -63,7 +67,8 @@
         android:background="@drawable/gakkan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonKougai" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonKougai"
+        tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/buttonLogin"
@@ -73,7 +78,8 @@
         android:background="@drawable/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonGakkan" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonGakkan"
+        tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/buttonFinishLogin"
@@ -85,7 +91,8 @@
         android:background="@drawable/close"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:elevation="2dp"/>
+        android:elevation="2dp"
+        tools:ignore="ContentDescription" />
 
     <WebView
         android:id="@+id/loginWebView"
