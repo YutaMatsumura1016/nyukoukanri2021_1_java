@@ -9,11 +9,11 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icon02"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/icon02_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Nyukoukanri2021_1">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

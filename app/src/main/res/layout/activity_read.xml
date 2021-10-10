@@ -1,21 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
 
     <WebView
         android:id="@+id/webView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:stateListAnimator="@null"
 
-        <TextView
-            android:id="@+id/idmText"
-            android:layout_width="175dp"
-            android:layout_height="137dp"
-            android:layout_weight="1"
-            android:layout_x="0dp"
-            android:layout_y="0dp"
-            android:text="TextView" />
+        app:layout_constraintTop_toBottomOf="@+id/image_ue"
+        tools:layout_editor_absoluteX="0dp">
+
+        <ImageView
+            android:id="@+id/image_shita"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_x="1dp"
+            android:layout_y="-3dp"
+            android:scaleType="fitEnd"
+            android:src="@drawable/yomitori_new_shita"
+            tools:ignore="ContentDescription" />
     </WebView>
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/image_ue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitStart"
+        android:src="@drawable/yomitori_new_ue"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/image_hidariue"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginLeft="60dp"
+        android:src="@drawable/hidariue"
+        android:alpha="0.75"
+        app:layout_constraintStart_toStartOf="@+id/image_ue"
+        app:layout_constraintTop_toTopOf="@+id/webView"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/image_migiue"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="30dp"
+        android:src="@drawable/migiue"
+        android:alpha="0.75"
+        app:layout_constraintEnd_toEndOf="@+id/webView"
+        app:layout_constraintTop_toTopOf="@+id/webView"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/image_hidarishita"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="180dp"
+        android:layout_marginLeft="60dp"
+        android:src="@drawable/hidarishita"
+        android:alpha="0.75"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/webView"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/image_migishita"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginRight="60dp"
+        android:src="@drawable/migishita"
+        android:alpha="0.75"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

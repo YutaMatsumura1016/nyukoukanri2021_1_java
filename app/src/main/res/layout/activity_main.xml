@@ -6,50 +6,95 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/buttonWaseda"
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/image_ue"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
-        android:text="早稲田"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:adjustViewBounds="true"
+        android:scaleType="fitStart"
+        android:src="@drawable/kidou_bg_ue"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <ImageView
+        android:id="@+id/image_shita"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitEnd"
+        android:src="@drawable/kidou_bg_shita" />
+
+
+    <ImageButton
+        android:id="@+id/buttonWaseda"
+        android:layout_width="140dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="-100dp"
+        android:background="@drawable/waseda"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_ue"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
         android:id="@+id/buttonToyama"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="140dp"
+        android:layout_height="70dp"
         android:layout_marginTop="10dp"
-        android:text="戸　山"
+        android:background="@drawable/toyama"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonWaseda" />
 
-    <Button
-        android:id="@+id/buttonLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="ログイン"
+    <ImageButton
+        android:id="@+id/buttonKougai"
+        android:layout_width="140dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/kougai"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonToyama" />
 
-    <Button
-        android:id="@+id/buttonFinishLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="閉じる"
-        app:layout_constraintBottom_toBottomOf="@+id/loginWebView"
+    <ImageButton
+        android:id="@+id/buttonGakkan"
+        android:layout_width="140dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/gakkan"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonKougai" />
+
+    <ImageButton
+        android:id="@+id/buttonLogin"
+        android:layout_width="250dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGakkan" />
+
+    <ImageButton
+        android:id="@+id/buttonFinishLogin"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="2dp"/>
 
     <WebView
         android:id="@+id/loginWebView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="-47dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/image_shita"
+        app:layout_constraintEnd_toEndOf="@+id/image_shita"
+        app:layout_constraintStart_toStartOf="@+id/image_shita"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
