@@ -32,6 +32,7 @@ public class readActivity extends AppCompatActivity {
     int soundpi;
 
 
+
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onCreate(Bundle savedInstanceState){
@@ -84,7 +85,7 @@ public class readActivity extends AppCompatActivity {
 
 
     @Override
-    protected void onResume(){
+    protected void onResume() {
         super.onResume();
         Log.d("startReading", "読み取りを開始したツノ！");
 
@@ -92,9 +93,11 @@ public class readActivity extends AppCompatActivity {
         intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
 
         //ほかのアプリが開かないようにする
-        PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(),0, intent, 0);
+        PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, intent, 0);
         nfcAdapter.enableForegroundDispatch(this, pendingIntent, null, null);
+
     }
+
 
     @Override
     protected void onPause(){
@@ -106,7 +109,6 @@ public class readActivity extends AppCompatActivity {
 
     class MyReaderCallback implements NfcAdapter.ReaderCallback{
         @RequiresApi(api = Build.VERSION_CODES.N)
-
 
         public void onTagDiscovered(Tag tag){
             Log.d("cardDiscovered", "カードが見つかったツノ！");
@@ -132,6 +134,29 @@ public class readActivity extends AppCompatActivity {
 
                     WebView webView = findViewById(R.id.webView);
 
+                    ImageView ueWaseda = findViewById(R.id.image_ueWaseda);
+                    ImageView ueToyama = findViewById(R.id.image_ueToyama);
+                    ImageView ueKougai = findViewById(R.id.image_ueKougai);
+                    ImageView ueGakkan = findViewById(R.id.image_ueGakkan);
+
+                    if(gate.equals("waseda")){
+                        ueToyama.setVisibility(View.INVISIBLE);
+                        ueKougai.setVisibility(View.INVISIBLE);
+                        ueGakkan.setVisibility(View.INVISIBLE);
+                    }else if(gate.equals("toyama")){
+                        ueWaseda.setVisibility(View.INVISIBLE);
+                        ueKougai.setVisibility(View.INVISIBLE);
+                        ueGakkan.setVisibility(View.INVISIBLE);
+                    }else if(gate.equals("kougai")){
+                        ueWaseda.setVisibility(View.INVISIBLE);
+                        ueToyama.setVisibility(View.INVISIBLE);
+                        ueGakkan.setVisibility(View.INVISIBLE);
+                    }else if(gate.equals("gakkan")){
+                        ueWaseda.setVisibility(View.INVISIBLE);
+                        ueToyama.setVisibility(View.INVISIBLE);
+                        ueKougai.setVisibility(View.INVISIBLE);
+                    }
+
                     webView.getSettings().setJavaScriptEnabled(true);
                     webView.getSettings().setDomStorageEnabled(true);
                     getWindow().setFlags(
@@ -148,8 +173,6 @@ public class readActivity extends AppCompatActivity {
             });
         }
     }
-
-
 
 
 }
