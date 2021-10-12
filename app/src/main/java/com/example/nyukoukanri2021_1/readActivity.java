@@ -11,9 +11,12 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
+import android.view.View;
 import android.view.WindowManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
@@ -34,6 +37,10 @@ public class readActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_read);
+        ImageView ueWaseda = findViewById(R.id.image_ueWaseda);
+        ImageView ueToyama = findViewById(R.id.image_ueToyama);
+        ImageView ueKougai = findViewById(R.id.image_ueKougai);
+        ImageView ueGakkan = findViewById(R.id.image_ueGakkan);
 
         //NFCアダプタの初期化
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
@@ -54,6 +61,25 @@ public class readActivity extends AppCompatActivity {
         Intent intent = getIntent();
         gate = intent.getStringExtra("gate");
         Log.d("gate", gate);
+
+        if(gate.equals("waseda")){
+            ueToyama.setVisibility(View.INVISIBLE);
+            ueKougai.setVisibility(View.INVISIBLE);
+            ueGakkan.setVisibility(View.INVISIBLE);
+        }else if(gate.equals("toyama")){
+            ueWaseda.setVisibility(View.INVISIBLE);
+            ueKougai.setVisibility(View.INVISIBLE);
+            ueGakkan.setVisibility(View.INVISIBLE);
+        }else if(gate.equals("kougai")){
+            ueWaseda.setVisibility(View.INVISIBLE);
+            ueToyama.setVisibility(View.INVISIBLE);
+            ueGakkan.setVisibility(View.INVISIBLE);
+        }else if(gate.equals("gakkan")){
+            ueWaseda.setVisibility(View.INVISIBLE);
+            ueToyama.setVisibility(View.INVISIBLE);
+            ueKougai.setVisibility(View.INVISIBLE);
+        }
+
     }
 
 

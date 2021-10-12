@@ -84,6 +84,46 @@
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="ContentDescription" />
 
+    <ImageView
+        android:id="@+id/image_ueWaseda"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/uelogo_waseda"
+        android:alpha="0.75"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/image_ueToyama"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/uelogo_toyama"
+        android:alpha="0.75"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/image_ueKougai"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/uelogo_kougai"
+        android:alpha="0.75"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/image_ueGakkan"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/uelogo_gakkan"
+        android:alpha="0.75"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
